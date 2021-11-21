@@ -1,0 +1,13 @@
+version: "3.9"
+services: 
+  gadm:
+    build: .
+    image: gadm
+    ports: 
+      - "8787:8787"
+    environment: 
+      - ROOT=TRUE
+      - PASSWORD=gadm
+      - DISABLE_AUTH=true
+    volumes: 
+      - .:/home/rstudio
